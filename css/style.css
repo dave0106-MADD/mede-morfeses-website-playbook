@@ -22,6 +22,41 @@ body::before {
 }
 @keyframes auroraFlow { 0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;} }
 
+/* Scroll Controls Container */
+#scroll-controls {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+/* Buttons */
+#scroll-controls button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #1FB6FF; /* Frozen Blue */
+  color: #0A0A0A;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Button Hover and Active States back top/bottom */
+#scroll-controls button:hover {
+  background: #00FFC3; /* Electric Teal */
+  transform: scale(1.1);
+}
+
+#scroll-controls button:active {
+  transform: scale(0.95);
+}
+
+
 /* Header */
 header { text-align:center; padding:50px 20px; background: linear-gradient(90deg, #1FB6FF, #00FFC3, #9B59B6); }
 header h1 { font-size:3rem; margin-top:10px; color:#E8F8FF; }
@@ -48,8 +83,8 @@ section:hover { box-shadow: 0 0 50px rgba(155,89,182,0.4); } /* Aurora Violet gl
 
 
 .diagram img {
-  max-width: 55%; /* Adjust based on desired size */
-  height: 55%;     /* Adjust based on desired size */
+  max-width: 47%; /* Adjust based on desired size */
+  height: 47%;     /* Adjust based on desired size */
   display: block;   /* Removes extra space below the image */
   margin: 0 auto;   /* Centers the image if the container is wider */
 }
@@ -92,7 +127,7 @@ td:hover { background:rgba(255,255,255,0.05); }
 
 /* Mood */
 .mood-grid { display:flex; flex-direction:column; align-items:center; gap:20px; }
-.mood-grid img { max-width:70%; border-radius:30px; box-shadow:0 10px 30px rgba(0,0,0,0.5); transition:transform 0.3s ease; }
+.mood-grid img { max-width:45%; border-radius:30px; box-shadow:0 10px 30px rgba(0,0,0,0.5); transition:transform 0.3s ease; }
 
 /* Footer */
 footer { text-align:center; padding:20px; background:#1A1A2E; color:#E8F8FF; }

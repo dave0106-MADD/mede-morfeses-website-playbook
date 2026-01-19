@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Scroll Controls -->
+    <div id="scroll-controls">
+      <button id="scroll-top" aria-label="Scroll to top">↑</button>
+      <button id="scroll-bottom" aria-label="Scroll to bottom">↓</button>
+    </div>
+
     <!-- Header -->
     <header>
       <div class="header-container">
@@ -249,5 +255,24 @@
     </footer>
 
     <script src="js/script.js"></script>
+
+    <script>
+      const scrollTopBtn = document.getElementById("scroll-top");
+      const scrollBottomBtn = document.getElementById("scroll-bottom");
+
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      scrollBottomBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>
